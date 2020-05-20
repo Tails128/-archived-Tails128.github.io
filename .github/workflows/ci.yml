@@ -1,6 +1,8 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: [develop]
 
 jobs:
   build:
@@ -9,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: One-step deploy
-        run: npm run deploy
+        run: npm i && npm run deploy
