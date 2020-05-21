@@ -1,46 +1,36 @@
+<script>
+	export let segment;
+	let height = window.screen.height;
+	let width = window.screen.width;
+	let url = `https://picsum.photos/${width}/${height}`;
+</script>
+
 <style>
-	h1, figure, p {
+	div {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		text-align: center;
-		margin: 0 auto;
+	}
+
+	h1,p {
+		color: black;
+		text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 	}
 
 	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
+		font-size: 4em;
 	}
 
 	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
+		font-size: 2em;
 	}
 </style>
 
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div style="background: url({url})">
+<h1>Just my best</h1>
+<p>I am still settiling in, so no content for now.<br/>If you have any question for me: 42!</p>
+</div>
